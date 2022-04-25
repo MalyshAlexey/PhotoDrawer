@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+  android:background="@color/back"
+  >
+
+  <Button
+    android:id="@+id/chooseBtn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_style"
+    android:text="@string/chooseButtonText"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginBottom="22dp"
+   />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="58dp"
+        android:layout_height="wrap_content"
+  android:layout_marginRight="22dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toTopOf="@id/guideline"
+      android:background="@drawable/ic_baseline_save_24"/>
+
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toTopOf="@+id/chooseBtn"
+    app:layout_constraintTop_toBottomOf="@+id/drawableImageView"
+
+    android:gravity="center">
+
+    <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/red"
+      android:layout_width="55dp"
+      android:layout_height="55dp"
+      android:background="@drawable/red"
+      android:layout_marginRight="10dp"
+      />
+    <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/yellow"
+      android:layout_width="55dp"
+      android:layout_height="55dp"
+      android:background="@drawable/yellow"
+
+      />
+    <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/green"
+      android:layout_width="55dp"
+      android:layout_height="55dp"
+      android:background="@drawable/green"
+      android:layout_marginLeft="10dp"
+
+      />
+
+
+
+  </LinearLayout>
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".80" />
+
+    <com.paintcolorltd.photodrawer.DrawableImageView
+        android:id="@+id/drawableImageView"
+        android:layout_width="350dp"
+        android:layout_height="550dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
